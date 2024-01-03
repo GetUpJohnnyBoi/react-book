@@ -22,15 +22,17 @@ function App() {
       <subheader className='subheader-component'>
         <h2>a social media experience for the everyday otter lover!</h2>
       </subheader>
-      <ul className='post-list'>
-        {ottersArray.map((post) => (
-          <Post
-            key={post.id}
-            image={post.image}
-            name={post.name}
-          />
-        ))}
-      </ul>
+      <div className='app-content'>
+        <ul className='post-list'>
+          {ottersArray.map((post) => (
+            <Post
+              key={post.id}
+              image={post.image}
+              name={post.name}
+            />
+          ))}
+        </ul>
+      </div>
       <footer className='footer-component'>
         <h3>Built by: John Mitchell</h3>
       </footer>
