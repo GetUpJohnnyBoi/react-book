@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import Post from './components/Post';
+import SelectedItem from './components/SelectedItem';
 import Barry from './otters/otter1.jpg';
 import Robin from './otters/otter2.jpg';
 import Maurice from './otters/otter3.jpg';
@@ -32,6 +33,10 @@ function App() {
             />
           ))}
         </ul>
+        <SelectedItem
+        image={ottersArray[0].image}
+        name={ottersArray[0].name}
+        />
       </div>
       <footer className='footer-component'>
         <h3>Built by: John Mitchell</h3>
