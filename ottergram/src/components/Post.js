@@ -2,8 +2,8 @@ import Barry from '../otters/otter1.jpg';
 
 function Post({ image, name }) {
 
-  const handleClick = (event) => {
-    return console.log(event)
+  const handleClick = (otterName) => {
+    return console.log('You clicked ' + otterName)
   }
 
     return (
