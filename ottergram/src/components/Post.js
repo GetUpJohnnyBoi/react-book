@@ -8,7 +8,7 @@ function Post({ image, name }) {
 
     return (
         <li className='post-component'>
-          <button onClick={handleClick}>
+          <button onClick={handleClick(name)}>
             <img src={image} alt={name}/>
             <p className='post-name'>{name}</p>
           </button>
