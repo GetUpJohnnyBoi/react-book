@@ -1,6 +1,11 @@
 import Lacey from '../canaries/img1.jpg';
 
 const Post = ({image, name}) => {
+
+    const handleClick = (event) => {
+        return console.log(event)
+    }
+    
     return (
         <li className='post-component'>
             <button>
