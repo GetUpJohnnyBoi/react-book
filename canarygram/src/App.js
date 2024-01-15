@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header';
 import Post from './components/Post';
+import SelectedItem from './components/SelectedItem';
 import Lacey from './canaries/img1.jpg';
 import Mel from './canaries/img2.jpg';
 import Jocko from './canaries/img3.jpg';
@@ -32,6 +33,10 @@ function App() {
             />
           ))}
         </ul>
+        <SelectedItem
+          image={canariesArray[0].image}
+          name={canariesArray[0].name}
+        />
       </div>
       <footer className='footer-component'>
         <a href='https://en.wikipedia.org/wiki/Atlantic_canary'>Atlantic Canary</a>
