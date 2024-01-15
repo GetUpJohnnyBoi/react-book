@@ -22,15 +22,17 @@ function App() {
       <subheader className='subheader-component'>
         <h2>I tawt I taw a putty tat.</h2>
       </subheader>
-      <ul className='post-list'>
-        {canariesArray.map((post) => (
-          <Post
-            image={post.image}
-            name={post.name}
-            key={post.id}
-          />
-        ))}
-      </ul>
+      <div className='app-content'>
+        <ul className='post-list'>
+          {canariesArray.map((post) => (
+            <Post
+              image={post.image}
+              name={post.name}
+              key={post.id}
+            />
+          ))}
+        </ul>
+      </div>
       <footer className='footer-component'>
         <a href='https://en.wikipedia.org/wiki/Atlantic_canary'>Atlantic Canary</a>
         <a href='https://en.wikipedia.org/wiki/Yellow_canary'>Yellow Canary</a>
