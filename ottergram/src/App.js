@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Post from './components/Post';
@@ -17,6 +18,7 @@ const ottersArray = [
 ];
 
 function App() {
+  const [selectedPostName, setSelectedPostName] = useState('Barry');
   return (
     <div>
       <Header />

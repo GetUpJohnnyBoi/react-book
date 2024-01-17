@@ -7,4 +7,4 @@ function SelectedItem({image, name}) {
     )
 }
 
-export default SelectedItem
+export default SelectedItem;
