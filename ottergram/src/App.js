@@ -19,6 +19,8 @@ const ottersArray = [
 
 function App() {
   const [selectedPostName, setSelectedPostName] = useState('Barry');
+  const selectedPost = ottersArray.find(otter => otter.name === selectedPostName);
+
   return (
     <div>
       <Header />
@@ -36,8 +38,8 @@ function App() {
           ))}
         </ul>
         <SelectedItem
-        image={ottersArray[0].image}
-        name={ottersArray[0].name}
+        image={selectedPost.image}
+        name={selectedPost.name}
         />
       </div>
       <footer className='footer-component'>
