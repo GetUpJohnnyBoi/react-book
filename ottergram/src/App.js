@@ -34,6 +34,7 @@ function App() {
               key={post.id}
               image={post.image}
               name={post.name}
+              setSelectedPostName={setSelectedPostName}
             />
           ))}
         </ul>

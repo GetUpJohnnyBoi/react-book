@@ -1,6 +1,6 @@
 import Barry from '../otters/otter1.jpg';
 
-function Post({ image, name }) {
+function Post({ image, name, setSelectedPostName }) {
 
   const handleClick = (otterName) => {
     return console.log('You clicked ' + otterName)
@@ -16,7 +16,7 @@ function Post({ image, name }) {
 
     return (
         <li className='post-component'>
-          <button onClick={() => handleClick(name)}
+          <button onClick={() => setSelectedPostName(name)}
                   onMouseEnter={() => handleMouseEnter(name)}
                   onMouseLeave={() => handleMouseLeave(name)}>
             <img src={image} alt={name}/>
