@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Post from './components/Post';
@@ -17,6 +18,9 @@ const canariesArray = [
 ]
 
 function App() {
+  const [selectedPostName, setSelectedPostName] = useState('Lacey');
+  const selectedPost = canariesArray.find(canary => canary.name === selectedPostName);
+
   return (
     <div>
       <Header />
@@ -30,12 +34,13 @@ function App() {
               image={post.image}
               name={post.name}
               key={post.id}
+              setSelectedPostName={setSelectedPostName}
             />
           ))}
         </ul>
         <SelectedItem
-          image={canariesArray[0].image}
-          name={canariesArray[0].name}
+          image={selectedPost.image}
+          name={selectedPost.name}
         />
       </div>
       <footer className='footer-component'>

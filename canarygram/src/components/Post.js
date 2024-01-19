@@ -1,6 +1,4 @@
-import Lacey from '../canaries/img1.jpg';
-
-const Post = ({image, name}) => {
+const Post = ({image, name, setSelectedPostName}) => {
 
     const handleClick = (canaryName) => {
         return window.alert('You clicked ' + canaryName + '!')
@@ -8,7 +6,7 @@ const Post = ({image, name}) => {
 
     return (
         <li className='post-component'>
-            <button onClick={() => handleClick(name)}>
+            <button onClick={() => setSelectedPostName(name)}>
                 <img src={image} alt={name}/>
                 <p className='post-name'>{name}</p>
             </button>
