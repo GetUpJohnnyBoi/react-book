@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
+import Subheader from './components/Subheader';
+import Footer from './components/Footer';
+import ShuffleButton from './components/ShuffleButton';
 import Post from './components/Post';
 import SelectedItem from './components/SelectedItem';
 
@@ -10,7 +13,7 @@ import Jocko from './canaries/img3.jpg';
 import Pierre from './canaries/img4.jpg';
 import Maurice from './canaries/img5.jpg';
 
-const canariesArray = [
+const canaryArray = [
   {image: Lacey, name: 'Lacey', id: 1},
   {image: Mel, name: 'Mel', id: 2},
   {image: Jocko, name: 'Jocko', id: 3},
@@ -19,18 +22,22 @@ const canariesArray = [
 ]
 
 function App() {
-  const [selectedPostName, setSelectedPostName] = useState('Lacey');
-  const selectedPost = canariesArray.find(canary => canary.name === selectedPostName);
+  const [selectedPostName, setSelectedPostName] = useState(canaryArray[0].name);
+  const selectedPost = canaryArray.find(canary => canary.name === selectedPostName);
+  const [canaryArrayState, setCanaryArrayState] = useState(canaryArray);
 
   return (
     <div>
       <Header />
-      <subheader className='subheader-component'>
-        <h2>I tawt I taw a putty tat.</h2>
-      </subheader>
+      <ShuffleButton 
+        canaryArrayState={canaryArrayState} 
+        setCanaryArrayState={setCanaryArrayState} 
+        setSelectedPostName={setSelectedPostName} />
+      <Subheader />
+
       <div className='app-content'>
         <ul className='post-list'>
-          {canariesArray.map((post) => (
+          {canaryArrayState.map((post) => (
             <Post
               image={post.image}
               name={post.name}
@@ -44,10 +51,7 @@ function App() {
           name={selectedPost.name}
         />
       </div>
-      <footer className='footer-component'>
-        <a href='https://en.wikipedia.org/wiki/Atlantic_canary'>Atlantic Canary</a>
-        <a href='https://en.wikipedia.org/wiki/Yellow_canary'>Yellow Canary</a>
-      </footer>
+      <Footer />
     </div>
   );
 }

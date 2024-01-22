@@ -39,8 +39,8 @@ function App() {
           ))}
         </ul>
         <SelectedItem
-        image={selectedPost.image}
-        name={selectedPost.name}
+          image={selectedPost.image}
+          name={selectedPost.name}
         />
       </div>
       <footer className='footer-component'>
