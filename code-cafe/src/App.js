@@ -6,7 +6,7 @@ import { items } from './items';
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header title="Southaven" />
       <Home items={items} />
     </div>
   );
