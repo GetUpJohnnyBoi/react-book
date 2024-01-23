@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="header-component">
       <img src={CoffeeLogo} alt="coffee-logo" />
-      <h1>Code Café</h1>
+      <h1>Bed and Second Breakfast Café</h1>
     </header>
   );
 }
