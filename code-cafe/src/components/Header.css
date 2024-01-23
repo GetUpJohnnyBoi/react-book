@@ -17,3 +17,11 @@
     color: #674836;
     margin-left: 15px;
 }
+
+.header-component h2 {
+    font-size: 30px;
+    font-weight: 400;
+    color: rgb(55, 186, 151);
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
