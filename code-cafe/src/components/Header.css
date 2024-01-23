@@ -18,6 +18,10 @@
     margin-left: 15px;
 }
 
+.header-component p {
+    color: #674836;
+}
+
 .header-component h2 {
     font-size: 30px;
     font-weight: 400;
