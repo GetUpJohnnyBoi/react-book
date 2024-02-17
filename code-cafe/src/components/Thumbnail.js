@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import './Thumbnail.css';
 
 function Thumbnail({ image, title }) {
@@ -13,5 +14,10 @@ function Thumbnail({ image, title }) {
     </a>
   );
 }
+
+Thumbnail.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+};
 
 export default Thumbnail;

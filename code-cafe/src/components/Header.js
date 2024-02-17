@@ -6,7 +6,7 @@ function Header({ title }) {
   return (
     <header className="header-component">
       <img src={CoffeeLogo} alt="coffee-logo" />
-      <h1>Bed and Second Breakfast Café</h1>
+      <h1>Bed and Second Breakfast</h1>
       &nbsp;
       <h2>{title}</h2>
     </header>
