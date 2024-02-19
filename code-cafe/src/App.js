@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './components/Home';
+import NotFound from './components/NotFound';
 
 function App() {
   const [items, setItems] = useState([]);
@@ -22,7 +23,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home items={items} />} />
-        <Route path="*" element={<div>Page Not Found</div>} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
