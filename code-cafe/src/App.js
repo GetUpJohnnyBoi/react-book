@@ -26,6 +26,7 @@ function App() {
       <Routes>
         <Route path="/details" element={<Details items={items} />}>
           <Route path=":id" element={<DetailItem />} />
+          <Route index element={<div>No Item Selected</div>} />
         </Route>
         <Route path="/" element={<Home items={items} />} />
         <Route path="*" element={<NotFound />} />
