@@ -1,4 +1,6 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import PropTypes from 'prop-types';
+import { Outlet } from 'react-router-dom';
 import Thumbnail from './Thumbnail';
 import { itemImages } from '../items';
 import './Details.css';
@@ -7,9 +9,7 @@ import ItemType from '../types/item';
 function Details({ items }) {
   return (
     <div className="details-component">
-      <div>
-        {/* display item */}
-      </div>
+      <Outlet />
       <div className="details-components-sidebar">
         {items.map((item) => (
           <Thumbnail
